@@ -205,229 +205,222 @@
       <a href="https://www.instagram.com/jazzupyourgerman/" target="_blank">📸</a>
     </div>
   </div>
-
   <script>
 const questions = [
   { 
-    text: "Wo ziehst du dich an?", 
-    options: [
-      "Ich ziehe mich im Schlafzimmer an.", 
-      "Ich ziehe im Schlafzimmer mich an.", 
-      "Ich mich ziehe im Schlafzimmer an.", 
-      "Ich ziehe an mich im Schlafzimmer."
-    ], 
-    correct: 0 
-  },
-  { 
-    text: "Wann ziehst du dich elegant an?", 
-    options: [
-      "Ich ziehe elegant mich an, wenn ich ausgehe.", 
-      "Ich mich ziehe elegant an.", 
-      "Ich ziehe mich elegant an, wenn ich ausgehe.", 
-      "Ich ziehe mich an elegant."
-    ], 
-    correct: 2 
-  },
-  { 
-    text: "Was siehst du dir in der Stadt an?", 
-    options: [
-      "Ich sehe mir die Stadt an.", 
-      "Ich sehe die Stadt mir an.", 
-      "Ich mich sehe die Stadt an.", 
-      "Ich sehe an mir die Stadt."
-    ], 
-    correct: 0 
-  },
-  { 
-    text: "Was kannst du dir gut merken?", 
-    options: [
-      "Ich merke mir gut Vokabeln.", 
-      "Ich mir merke gut Vokabeln.", 
-      "Ich merke gut mir Vokabeln.", 
-      "Ich merke mich gut Vokabeln."
-    ], 
-    correct: 0 
-  },
-  { 
-    text: "Worüber ärgerst du dich?", 
-    options: [
-      "Ich ärgere über mich den Stau.", 
-      "Ich ärgere mich über den Stau.", 
-      "Ich ärgere den Stau mich.", 
-      "Ich ärgere mich den Stau über."
-    ], 
+    text: "Was bedeutet „allgemein“?", 
+    options: ["specific", "overall"], 
     correct: 1 
   },
   { 
-    text: "Worauf freust du dich?", 
-    options: [
-      "Ich freue mich auf das Wochenende.", 
-      "Ich freue auf das Wochenende mich.", 
-      "Ich mich freue auf das Wochenende.", 
-      "Ich freue das Wochenende auf mich."
-    ], 
+    text: "Wie sagt man „zufrieden“ auf Englisch?", 
+    options: ["satisfied", "angry"], 
     correct: 0 
   },
   { 
-    text: "Wo entspannst du dich?", 
-    options: [
-      "Ich entspanne mich im Park.", 
-      "Ich entspanne im Park mich.", 
-      "Ich mich entspanne im Park.", 
-      "Ich entspanne mich auf dem Park."
-    ], 
-    correct: 0 
-  },
-  { 
-    text: "Wohin legst du dich am Abend?", 
-    options: [
-      "Ich lege ins Bett mich.", 
-      "Ich lege mich ins Bett.", 
-      "Ich mich lege ins Bett.", 
-      "Ich lege mich Bett ins."
-    ], 
+    text: "Was heißt „to satisfy“ auf Deutsch?", 
+    options: ["wütend", "zufrieden"], 
     correct: 1 
   },
   { 
-    text: "Wie oft rasierst du dich?", 
-    options: [
-      "Ich rasieren mich jeden Tag.", 
-      "Ich rasiere mich jeden Tag.", 
-      "Ich mich rasiere jeden Tag.", 
-      "Ich rasiere jeden Tag mich."
-    ], 
+    text: "Was bedeutet „Das war nicht zufriedenstellend“?", 
+    options: ["That was not satisfying", "That was satisfying"], 
+    correct: 0 
+  },
+  { 
+    text: "Wie sagt man „teilnehmen an etwas“?", 
+    options: ["to avoid something", "to participate in something"], 
     correct: 1 
   },
   { 
-    text: "Was leihst du dir?", 
-    options: [
-      "Ich leihe mir ein Fahrrad.", 
-      "Ich mir leihe ein Fahrrad.", 
-      "Ich leihe mich ein Fahrrad.", 
-      "Ich leihen mir ein Fahrrad."
-    ], 
+    text: "Welche Form ist richtig? „Ich gehe ...“", 
+    options: ["zur Konferenz", "auf der Konferenz"], 
     correct: 0 
   },
   { 
-    text: "Was überlegst du dir?", 
-    options: [
-      "Ich überlege mir das gut.", 
-      "Ich überlege das mir gut.", 
-      "Ich mir überlege das gut.", 
-      "Ich überlege gut mir das."
-    ], 
-    correct: 0 
-  },
-
-  { 
-    text: "Wo ziehst du dich an?", 
-    options: [
-      "Ich ziehe mich im Schlafzimmer an.", 
-      "Ich ziehe im Schlafzimmer mich an.", 
-      "Ich mich ziehe im Schlafzimmer an.", 
-      "Ich ziehe an mich im Schlafzimmer."
-    ], 
+    text: "Was bedeutet „nicht nur …, sondern auch …“?", 
+    options: ["not only … but also …", "only … but not …"], 
     correct: 0 
   },
   { 
-    text: "Wann ziehst du dich elegant an?", 
-    options: [
-      "Ich ziehe elegant mich an, wenn ich ausgehe.", 
-      "Ich mich ziehe elegant an.", 
-      "Ich ziehe mich elegant an, wenn ich ausgehe.", 
-      "Ich ziehe mich an elegant."
-    ], 
-    correct: 2 
-  },
-  { 
-    text: "Was siehst du dir in der Stadt an?", 
-    options: [
-      "Ich sehe mir die Stadt an.", 
-      "Ich sehe die Stadt mir an.", 
-      "Ich mich sehe die Stadt an.", 
-      "Ich sehe an mir die Stadt."
-    ], 
-    correct: 0 
-  },
-  { 
-    text: "Was kannst du dir gut merken?", 
-    options: [
-      "Ich merke mir gut Vokabeln.", 
-      "Ich mir merke gut Vokabeln.", 
-      "Ich merke gut mir Vokabeln.", 
-      "Ich merke mich gut Vokabeln."
-    ], 
-    correct: 0 
-  },
-  { 
-    text: "Worüber ärgerst du dich?", 
-    options: [
-      "Ich ärgere über mich den Stau.", 
-      "Ich ärgere mich über den Stau.", 
-      "Ich ärgere den Stau mich.", 
-      "Ich ärgere mich den Stau über."
-    ], 
+    text: "Was beschreibt „hilfsbereit“?", 
+    options: ["a helpful tip", "a helpful person"], 
     correct: 1 
   },
   { 
-    text: "Worauf freust du dich?", 
-    options: [
-      "Ich freue mich auf das Wochenende.", 
-      "Ich freue auf das Wochenende mich.", 
-      "Ich mich freue auf das Wochenende.", 
-      "Ich freue das Wochenende auf mich."
-    ], 
+    text: "Welches Wort passt zu „hilfreich“?", 
+    options: ["helpful tip", "helpful person"], 
     correct: 0 
   },
   { 
-    text: "Wo entspannst du dich?", 
-    options: [
-      "Ich entspanne mich im Park.", 
-      "Ich entspanne im Park mich.", 
-      "Ich mich entspanne im Park.", 
-      "Ich entspanne mich auf dem Park."
-    ], 
-    correct: 0 
-  },
-  { 
-    text: "Wohin legst du dich am Abend?", 
-    options: [
-      "Ich lege ins Bett mich.", 
-      "Ich lege mich ins Bett.", 
-      "Ich mich lege ins Bett.", 
-      "Ich lege mich Bett ins."
-    ], 
+    text: "Was bedeutet „detailliert“?", 
+    options: ["short", "detailed"], 
     correct: 1 
   },
   { 
-    text: "Wie oft rasierst du dich?", 
-    options: [
-      "Ich rasieren mich jeden Tag.", 
-      "Ich rasiere mich jeden Tag.", 
-      "Ich mich rasiere jeden Tag.", 
-      "Ich rasiere jeden Tag mich."
-    ], 
+    text: "Welche Frage passt? „Haben Sie immer sehr … geantwortet?“", 
+    options: ["schnell", "detailliert"], 
     correct: 1 
   },
   { 
-    text: "Was leihst du dir?", 
-    options: [
-      "Ich leihe mir ein Fahrrad.", 
-      "Ich mir leihe ein Fahrrad.", 
-      "Ich leihe mich ein Fahrrad.", 
-      "Ich leihen mir ein Fahrrad."
-    ], 
+    text: "Was heißt „gesellig“?", 
+    options: ["contact-friendly, sociable", "shy"], 
     correct: 0 
   },
   { 
-    text: "Was überlegst du dir?", 
-    options: [
-      "Ich überlege mir das gut.", 
-      "Ich überlege das mir gut.", 
-      "Ich mir überlege das gut.", 
-      "Ich überlege gut mir das."
-    ], 
-    correct: 0 
+    text: "Was bedeutet „schüchtern“?", 
+    options: ["outgoing", "shy"], 
+    correct: 1 
+  },
+  { 
+    text: "Was heißt „abschneiden“?", 
+    options: ["to join", "to cut off"], 
+    correct: 1 
+  },
+  { 
+    text: "„Ich war wütend auf …“ bedeutet:", 
+    options: ["I was happy with …", "I was angry at …"], 
+    correct: 1 
+  },
+  { 
+    text: "Was bedeutet „das Bedürfnis“?", 
+    options: ["the fun", "the need"], 
+    correct: 1 
+  },
+  { 
+    text: "Was ist „die Fluggesellschaft“?", 
+    options: ["airport", "airline"], 
+    correct: 1 
+  },
+  { 
+    text: "Was heißt „Mir ist schwindelig“?", 
+    options: ["I feel hungry", "I feel dizzy"], 
+    correct: 1 
+  },
+  { 
+    text: "Was bedeutet „beobachten“?", 
+    options: ["to notice", "to observe"], 
+    correct: 1 
+  },
+  { 
+    text: "Was heißt „benötigen“?", 
+    options: ["to watch", "to need"], 
+    correct: 1 
+  },
+  { 
+    text: "Was bedeutet „bemerken“?", 
+    options: ["to break", "to notice"], 
+    correct: 1 
+  },
+  { 
+    text: "Was heißt „nachdenken über …“?", 
+    options: ["to forget about …", "to think about …"], 
+    correct: 1 
+  },
+  { 
+    text: "„stolz auf jemanden sein“ heißt:", 
+    options: ["to be ashamed of someone", "to be proud of someone"], 
+    correct: 1 
+  },
+  { 
+    text: "Was bedeutet „erfolgreich“?", 
+    options: ["unlucky", "successful"], 
+    correct: 1 
+  },
+  { 
+    text: "„Innen ist es anders als außen“ bedeutet:", 
+    options: ["Inside it is the same as outside", "Inside it is different than outside"], 
+    correct: 1 
+  },
+  { 
+    text: "„Er hat die Nervosität nicht gezeigt“ bedeutet:", 
+    options: ["He showed his nervousness", "He didn’t show his nervousness"], 
+    correct: 1 
+  },
+  { 
+    text: "Wie sagt man „Es schien so, dass er ruhig war“?", 
+    options: ["It looked like he was angry", "It looked like he was calm"], 
+    correct: 1 
+  },
+  { 
+    text: "Was heißt „ein Stück Fleisch probieren“?", 
+    options: ["to cook a piece of meat", "to try a piece of meat"], 
+    correct: 1 
+  },
+  { 
+    text: "„Zu viel für meinen Magen“ bedeutet:", 
+    options: ["just enough for my stomach", "too much for my stomach"], 
+    correct: 1 
+  },
+  { 
+    text: "Was bedeutet „sich übergeben“?", 
+    options: ["to eat", "to vomit"], 
+    correct: 1 
+  },
+  { 
+    text: "Was ist ein „Aperitif“?", 
+    options: ["a main dish", "a small drink before dinner"], 
+    correct: 1 
+  },
+  { 
+    text: "Was heißt „Vegetarier“?", 
+    options: ["meat eater", "vegetarian"], 
+    correct: 1 
+  },
+  { 
+    text: "Was bedeutet „erfrieren“?", 
+    options: ["to drown", "to freeze to death"], 
+    correct: 1 
+  },
+  { 
+    text: "Was heißt „erschießen“?", 
+    options: ["to help someone", "to shoot someone"], 
+    correct: 1 
+  },
+  { 
+    text: "Welche Form ist Partizip I?", 
+    options: ["gespielt", "spielend"], 
+    correct: 1 
+  },
+  { 
+    text: "Welche Form ist Partizip II?", 
+    options: ["lächelnd", "gelächelt"], 
+    correct: 1 
+  },
+  { 
+    text: "Welche Konjunktion passt? „Ich gebe dir meinen Hammer, … du das Bild an die Wand hängen kannst.“", 
+    options: ["sodass", "damit"], 
+    correct: 1 
+  },
+  { 
+    text: "Was bedeutet „fertig“?", 
+    options: ["prepared", "done"], 
+    correct: 1 
+  },
+  { 
+    text: "Was bedeutet „bereit“?", 
+    options: ["done", "prepared"], 
+    correct: 1 
+  },
+  { 
+    text: "Was heißt „stattfinden“?", 
+    options: ["to cancel", "to take place"], 
+    correct: 1 
+  },
+  { 
+    text: "Was bedeutet „statt“ (Präposition)?", 
+    options: ["after", "instead of"], 
+    correct: 1 
+  },
+  { 
+    text: "Was heißt „die Stadt“?", 
+    options: ["country", "city"], 
+    correct: 1 
+  },
+  { 
+    text: "Welche Form ist richtig? „Ich buche einen Zug … des Fluges.“", 
+    options: ["statt von", "statt"], 
+    correct: 1 
   }
 ];
     let currentQuestion = 0;
