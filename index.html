@@ -207,336 +207,47 @@
   </div>
 <script>
 const questions = [
-  { 
-    text: "Was bedeutet 'merken', wenn es mit 'dass'-Nebensatz benutzt wird?", 
-    options: ["to look", "to notice/realize"], 
-    correct: 1 
-  },
-  { 
-    text: "Was bedeutet 'bemerken'?", 
-    options: ["to notice (with direct object)", "to seem"], 
-    correct: 0 
-  },
-  { 
-    text: "„Er scheint ruhig heute.“ bedeutet:", 
-    options: ["He seems calm today", "He looks calm today"], 
-    correct: 0 
-  },
-  { 
-    text: "„Es scheint so, dass er müde ist.“ bedeutet:", 
-    options: ["It is certain he is tired", "It seems he is tired"], 
-    correct: 1 
-  },
-  { 
-    text: "„Er sieht heute müde aus.“ bedeutet:", 
-    options: ["He seems tired today", "He looks tired today"], 
-    correct: 1 
-  },
-  { 
-    text: "Was bedeutet 'die Klimaanlage'?", 
-    options: ["heater", "air conditioner"], 
-    correct: 1 
-  },
-  { 
-    text: "„Er übergibt sich“ bedeutet:", 
-    options: ["He hands over", "He vomits"], 
-    correct: 1 
-  },
-  { 
-    text: "„Er hat sich übergeben“ bedeutet:", 
-    options: ["He has vomited", "He has surrendered"], 
-    correct: 0 
-  },
-  { 
-    text: "Was bedeutet 'umsonst' in 'Das ist umsonst'?", 
-    options: ["expensive", "free of charge"], 
-    correct: 1 
-  },
-  { 
-    text: "Was bedeutet 'für die Dauer'?", 
-    options: ["for the duration", "forever"], 
-    correct: 0 
-  },
-  { 
-    text: "„Sie wird als Fitnesscenter benutzt.“ bedeutet:", 
-    options: ["It is used as a fitness center", "It is being built as a fitness center"], 
-    correct: 0 
-  },
-  { 
-    text: "„Bevor wir Unterricht haben, lerne ich Deutsch.“ bedeutet:", 
-    options: ["I learn German before class", "I learn German after class"], 
-    correct: 0 
-  },
-  { 
-    text: "„Wart ihr drinnen?“ bedeutet:", 
-    options: ["Were you outside?", "Were you inside?"], 
-    correct: 1 
-  },
-  { 
-    text: "Was bedeutet 'komisch'?", 
-    options: ["funny/strange", "comfortable"], 
-    correct: 0 
-  },
-  { 
-    text: "„Das entspannt mich“ bedeutet:", 
-    options: ["That relaxes me", "That stresses me"], 
-    correct: 0 
-  },
-  { 
-    text: "„Weil ihn das entspannt“ bedeutet:", 
-    options: ["Because it relaxes him", "Although it relaxes him"], 
-    correct: 0 
-  },
-  { 
-    text: "„Die Toskana ist weit weg“ bedeutet:", 
-    options: ["Tuscany is far away", "Tuscany is nearby"], 
-    correct: 0 
-  },
-  { 
-    text: "Was bedeutet 'ziemlich nah'?", 
-    options: ["quite near", "very far"], 
-    correct: 0 
-  },
-  { 
-    text: "„Meine erste Quelle ist Wikipedia“ bedeutet:", 
-    options: ["My first source is Wikipedia", "My first source is Google"], 
-    correct: 0 
-  },
-  { 
-    text: "„Persönliche Daten werden gespeichert“ bedeutet:", 
-    options: ["Personal data is deleted", "Personal data is stored"], 
-    correct: 1 
-  },
-  { 
-    text: "„Etwas nachmachen“ bedeutet:", 
-    options: ["to imitate something", "to invent something new"], 
-    correct: 0 
-  },
-  { 
-    text: "„Etwas nachkochen“ bedeutet:", 
-    options: ["to cook something yourself without a recipe", "to cook something following someone else's recipe"], 
-    correct: 1 
-  },
-  { 
-    text: "„Etwas nachsprechen“ bedeutet:", 
-    options: ["to repeat something spoken", "to refuse to speak"], 
-    correct: 0 
-  },
-  { 
-    text: "Was bedeutet „allgemein“?", 
-    options: ["specific", "overall"], 
-    correct: 1 
-  },
-  { 
-    text: "Wie sagt man „zufrieden“ auf Englisch?", 
-    options: ["satisfied", "angry"], 
-    correct: 0 
-  },
-  { 
-    text: "Was heißt „to satisfy“ auf Deutsch?", 
-    options: ["wütend", "zufriedenstellen"], 
-    correct: 1 
-  },
-  { 
-    text: "Was bedeutet „Das war nicht zufriedenstellend“?", 
-    options: ["That was not satisfying", "That was satisfying"], 
-    correct: 0 
-  },
-  { 
-    text: "Wie sagt man „teilnehmen an etwas“?", 
-    options: ["to avoid something", "to participate in something"], 
-    correct: 1 
-  },
-  { 
-    text: "Welche Form ist richtig? „Ich gehe ...“", 
-    options: ["zur Konferenz", "auf der Konferenz"], 
-    correct: 0 
-  },
-  { 
-    text: "Was bedeutet „nicht nur …, sondern auch …“?", 
-    options: ["not only … but also …", "only … but not …"], 
-    correct: 0 
-  },
-  { 
-    text: "Was beschreibt „hilfsbereit“?", 
-    options: ["a helpful tip", "a helpful person"], 
-    correct: 1 
-  },
-  { 
-    text: "Welches Wort passt zu „hilfreich“?", 
-    options: ["helpful tip", "helpful person"], 
-    correct: 0 
-  },
-  { 
-    text: "Was bedeutet „detailliert“?", 
-    options: ["short", "detailed"], 
-    correct: 1 
-  },
-  { 
-    text: "Welche Frage passt? „Haben Sie immer sehr … geantwortet?“", 
-    options: ["schnell", "detailliert"], 
-    correct: 1 
-  },
-  { 
-    text: "Was heißt „gesellig“?", 
-    options: ["contact-friendly, sociable", "shy"], 
-    correct: 0 
-  },
-  { 
-    text: "Was bedeutet „schüchtern“?", 
-    options: ["outgoing", "shy"], 
-    correct: 1 
-  },
-  { 
-    text: "Was heißt „abschneiden“?", 
-    options: ["to join", "to cut off"], 
-    correct: 1 
-  },
-  { 
-    text: "„Ich war wütend auf …“ bedeutet:", 
-    options: ["I was happy with …", "I was angry at …"], 
-    correct: 1 
-  },
-  { 
-    text: "Was bedeutet „das Bedürfnis“?", 
-    options: ["the fun", "the need"], 
-    correct: 1 
-  },
-  { 
-    text: "Was ist „die Fluggesellschaft“?", 
-    options: ["airport", "airline"], 
-    correct: 1 
-  },
-  { 
-    text: "Was heißt „Mir ist schwindelig“?", 
-    options: ["I feel hungry", "I feel dizzy"], 
-    correct: 1 
-  },
-  { 
-    text: "Was bedeutet „beobachten“?", 
-    options: ["to notice", "to observe"], 
-    correct: 1 
-  },
-  { 
-    text: "Was heißt „benötigen“?", 
-    options: ["to watch", "to need"], 
-    correct: 1 
-  },
-  { 
-    text: "Was bedeutet „bemerken“?", 
-    options: ["to break", "to notice"], 
-    correct: 1 
-  },
-  { 
-    text: "Was heißt „nachdenken über …“?", 
-    options: ["to forget about …", "to think about …"], 
-    correct: 1 
-  },
-  { 
-    text: "„stolz auf jemanden sein“ heißt:", 
-    options: ["to be ashamed of someone", "to be proud of someone"], 
-    correct: 1 
-  },
-  { 
-    text: "Was bedeutet „erfolgreich“?", 
-    options: ["unlucky", "successful"], 
-    correct: 1 
-  },
-  { 
-    text: "„Innen ist es anders als außen“ bedeutet:", 
-    options: ["Inside it is the same as outside", "Inside it is different than outside"], 
-    correct: 1 
-  },
-  { 
-    text: "„Er hat die Nervosität nicht gezeigt“ bedeutet:", 
-    options: ["He showed his nervousness", "He didn’t show his nervousness"], 
-    correct: 1 
-  },
-  { 
-    text: "Wie sagt man „Es schien so, dass er ruhig war“?", 
-    options: ["It looked like he was angry", "It looked like he was calm"], 
-    correct: 1 
-  },
-  { 
-    text: "Was heißt „ein Stück Fleisch probieren“?", 
-    options: ["to cook a piece of meat", "to try a piece of meat"], 
-    correct: 1 
-  },
-  { 
-    text: "„Zu viel für meinen Magen“ bedeutet:", 
-    options: ["just enough for my stomach", "too much for my stomach"], 
-    correct: 1 
-  },
-  { 
-    text: "Was bedeutet „sich übergeben“?", 
-    options: ["to eat", "to vomit"], 
-    correct: 1 
-  },
-  { 
-    text: "Was ist ein „Aperitif“?", 
-    options: ["a main dish", "a small drink before dinner"], 
-    correct: 1 
-  },
-  { 
-    text: "Was heißt „Vegetarier“?", 
-    options: ["meat eater", "vegetarian"], 
-    correct: 1 
-  },
-  { 
-    text: "Was bedeutet „erfrieren“?", 
-    options: ["to drown", "to freeze to death"], 
-    correct: 1 
-  },
-  { 
-    text: "Was heißt „erschießen“?", 
-    options: ["to help someone", "to shoot someone"], 
-    correct: 1 
-  },
-  { 
-    text: "Welche Form ist Partizip I?", 
-    options: ["gespielt", "spielend"], 
-    correct: 1 
-  },
-  { 
-    text: "Welche Form ist Partizip II?", 
-    options: ["lächelnd", "gelächelt"], 
-    correct: 1 
-  },
-  { 
-    text: "Welche Konjunktion passt? „Ich gebe dir meinen Hammer, … du das Bild an die Wand hängen kannst.“", 
-    options: ["sodass", "damit"], 
-    correct: 1 
-  },
-  { 
-    text: "Was bedeutet „fertig“?", 
-    options: ["prepared", "done"], 
-    correct: 1 
-  },
-  { 
-    text: "Was bedeutet „bereit“?", 
-    options: ["done", "prepared"], 
-    correct: 1 
-  },
-  { 
-    text: "Was heißt „stattfinden“?", 
-    options: ["to cancel", "to take place"], 
-    correct: 1 
-  },
-  { 
-    text: "Was bedeutet „statt“ (Präposition)?", 
-    options: ["after", "instead of"], 
-    correct: 1 
-  },
-  { 
-    text: "Was heißt „die Stadt“?", 
-    options: ["country", "city"], 
-    correct: 1 
-  },
-  { 
-    text: "Welche Form ist richtig? „Ich buche einen Zug … des Fluges.“", 
-    options: ["statt von", "statt"], 
-    correct: 1 
-  }
+{ text: "Was bedeutet „Eingangstor“?", options: ["Tür zum Hineingehen", "Auto zum Hineinfahren"], correct: 0 },
+{ text: "Was bedeutet „überdimensional“?", options: ["sehr klein", "sehr groß"], correct: 1 },
+{ text: "„außerhalb vom Zentrum“ heißt:", options: ["im Zentrum", "nicht im Zentrum"], correct: 1 },
+{ text: "„außerhalb der Stadt“ heißt:", options: ["nicht in der Stadt", "mitten in der Stadt"], correct: 0 },
+{ text: "„der Unfall – die Unfälle“ bedeutet:", options: ["etwas passiert ohne Absicht", "ein normales Treffen"], correct: 0 },
+{ text: "„schwerer Unfall“ heißt:", options: ["kleine, harmlose Verletzung", "ernsthafte, große Verletzung"], correct: 1 },
+{ text: "„der Stau“ ist …", options: ["viele Autos, die nicht weiterfahren können", "eine freie Autobahn"], correct: 0 },
+{ text: "Was ist eine Klimaanlage?", options: ["ein Gerät zum Heizen", "ein Gerät zum Kühlen"], correct: 1 },
+
+{ text: "„insgesamt“ steht oft mit …", options: ["Nomen", "Verb"], correct: 1 },
+{ text: "„allgemein“ steht oft mit …", options: ["Verb", "Adjektiv"], correct: 0 },
+{ text: "„Der Krankenwagen“ kommt, wenn …", options: ["jemand verletzt ist", "jemand Geburtstag hat"], correct: 0 },
+{ text: "„Die Feuerwehr“ kommt, wenn …", options: ["es brennt", "jemand umzieht"], correct: 0 },
+{ text: "„Das Feuerwerk“ sieht man …", options: ["an Silvester", "im Krankenhaus"], correct: 0 },
+{ text: "„Die Gegend“ bedeutet:", options: ["ein Ort, wo man wohnt", "ein Verkehrsmittel"], correct: 0 },
+{ text: "„der Baum – die Bäume“ bedeutet:", options: ["Pflanze mit Stamm und Blättern", "ein kleines Haus"], correct: 0 },
+{ text: "„das Häuschen“ ist …", options: ["ein großes Gebäude", "ein kleines Haus"], correct: 1 },
+{ text: "„Insektenspray“ ist …", options: ["ein Mittel gegen Insekten", "ein Getränk"], correct: 0 },
+{ text: "„die Baustelle“ bedeutet:", options: ["ein Ort, wo gebaut wird", "ein Ort zum Tanzen"], correct: 0 },
+{ text: "„die Spur (Autobahn)“ bedeutet:", options: ["ein Fahrstreifen für Autos", "ein Tierzeichen im Wald"], correct: 0 },
+{ text: "„eng“ bedeutet:", options: ["breit", "schmal"], correct: 1 },
+
+{ text: "„Gab es viel Stau auf der Autobahn?“", options: ["Ja, viele Autos standen still", "Ja, die Straßen waren frei"], correct: 0 },
+{ text: "„zurzeit“ bedeutet:", options: ["im Moment, jetzt", "in der Vergangenheit"], correct: 0 },
+{ text: "„zu Hause“ bedeutet:", options: ["im eigenen Wohnort", "auf der Arbeit"], correct: 0 },
+{ text: "„Ich schwimme im Pool“ bedeutet:", options: ["im Wasserbecken", "im Wald"], correct: 0 },
+{ text: "„nach Norden fahren“ bedeutet:", options: ["Richtung Süden", "Richtung Norden"], correct: 1 },
+{ text: "„Müll korrekt trennen“ bedeutet:", options: ["Papier, Plastik und Bio getrennt sammeln", "alles in eine Tonne werfen"], correct: 0 },
+
+{ text: "„gern – lieber – am liebsten“ → richtig ist:", options: ["Ich schwimme gern im Pool.", "Ich schwimme am liebsten im Auto."], correct: 0 },
+{ text: "„viel – mehr – am meisten“ → richtig ist:", options: ["Ich habe mehr Geld als du.", "Ich habe am meisten Hunger im Stau."], correct: 0 },
+{ text: "„Ich schwimme lieber im Meer als im Pool“ bedeutet:", options: ["Meer ist schöner", "Pool ist schöner"], correct: 0 },
+{ text: "„Ich schwimme am liebsten im Pool“ bedeutet:", options: ["Pool ist meine Lieblingswahl", "Ich mag Pool gar nicht"], correct: 0 },
+
+{ text: "„Das hängt vom Wetter ab“ bedeutet:", options: ["Es ist egal", "Es kommt auf das Wetter an"], correct: 1 },
+{ text: "„Ob ich heute shoppen gehe, hängt von meinem Geldbeutel ab“ bedeutet:", options: ["Ich gehe nur einkaufen, wenn ich Geld habe", "Ich gehe immer einkaufen"], correct: 0 },
+{ text: "„Die Menge der Tüten hängt davon ab, wie viele Menschen im Haushalt leben“ bedeutet:", options: ["Alle Haushalte bekommen gleich viele Tüten", "Je mehr Menschen, desto mehr Tüten"], correct: 1 },
+
+{ text: "„losfahren“ bedeutet:", options: ["mit dem Auto starten", "mit dem Auto parken"], correct: 0 },
+{ text: "„losfliegen“ bedeutet:", options: ["mit dem Flugzeug starten", "am Flughafen warten"], correct: 0 },
+{ text: "„Von wo fahrt ihr los?“ bedeutet:", options: ["Wo beginnt eure Reise?", "Wo endet eure Reise?"], correct: 0 }
 ];
     let currentQuestion = 0;
     let score = 0;
