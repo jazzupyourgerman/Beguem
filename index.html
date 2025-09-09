@@ -206,239 +206,210 @@
     </div>
   </div>
 <script>
-const questions = [
-  { text: "das Unterbewusstsein", options: ["holiday", "subconscious mind"], correct: 1 },
-  { text: "die Stunde", options: ["day", "hour"], correct: 1 },
-  { text: "die Beschäftigung", options: ["vacation", "occupation / activity"], correct: 1 },
-  { text: "der See", options: ["sea", "lake"], correct: 1 },
-  { text: "die See", options: ["mountain", "ocean"], correct: 1 },
-  { text: "das Meer", options: ["forest", "sea"], correct: 1 },
-  { text: "die Insel", options: ["desert", "island"], correct: 1 },
-  { text: "das Glück", options: ["disaster", "luck / happiness"], correct: 1 },
-  { text: "das Pech", options: ["much luck", "bad luck"], correct: 1 },
-  { text: "der Regen", options: ["sun", "rain"], correct: 1 },
-  { text: "der Sturm", options: ["rainbow", "storm"], correct: 1 },
-  { text: "der August", options: ["Winter", "August"], correct: 1 },
-  { text: "der Ort", options: ["street", "place / town"], correct: 1 },
-  { text: "die Arbeit", options: ["holiday", "work / job"], correct: 1 },
-  { text: "der Job", options: ["job", "drink"], correct: 0 },
-  { text: "das Zimmer", options: ["garden", "room"], correct: 1 },
-  { text: "der Norden", options: ["north", "south"], correct: 0 },
-  { text: "das Hotel", options: ["hotel", "train station"], correct: 0 },
-  { text: "die Rezeption", options: ["restaurant", "reception desk"], correct: 1 },
-  { text: "die Fahrradwege", options: ["bicycle paths", "car parks"], correct: 0 },
-
-  { text: "weitermachen", options: ["to stop", "to continue"], correct: 1 },
-  { text: "weiterkochen", options: ["to keep cooking", "to stop eating"], correct: 0 },
-  { text: "weiterspielen", options: ["to fall asleep", "to keep playing"], correct: 1 },
-  { text: "weitertrinken", options: ["to break the glass", "to keep drinking"], correct: 1 },
-  { text: "vorschlagen", options: ["to forget", "to suggest"], correct: 1 },
-  { text: "empfehlen", options: ["to recommend", "to forbid"], correct: 0 },
-  { text: "beneiden", options: ["to celebrate", "to envy"], correct: 1 },
-  { text: "regnen", options: ["to shine", "to rain"], correct: 1 },
-  { text: "entstehen", options: ["to come into existence", "to disappear"], correct: 0 },
-  { text: "sich verändern", options: ["to stay the same", "to change"], correct: 1 },
-  { text: "sich verbessern", options: ["to improve", "to get worse"], correct: 0 },
-  { text: "besuchen", options: ["to visit", "to hide"], correct: 0 },
-  { text: "umziehen", options: ["to sleep", "to move (change residence)"], correct: 1 },
-  { text: "wegziehen", options: ["to stay forever", "to move away"], correct: 1 },
-  { text: "finden", options: ["to lose", "to find"], correct: 1 },
-  { text: "sich beeilen", options: ["to relax", "to hurry"], correct: 1 },
-  { text: "bearbeiten", options: ["to destroy", "to edit / work on"], correct: 1 },
-  { text: "vorbereiten", options: ["to prepare", "to forget"], correct: 0 },
-  { text: "werden", options: ["to eat", "to become / to be (auxiliary)"], correct: 1 },
-  { text: "bleiben", options: ["to leave", "to stay"], correct: 1 },
-  { text: "reisen", options: ["to sleep", "to travel"], correct: 1 },
-  { text: "rausgehen", options: ["to go outside", "to go to bed"], correct: 0 },
-  { text: "reingehen", options: ["to leave town", "to go inside"], correct: 1 },
-
-  { text: "Das Unterbewusstsein ist …", options: ["etwas, das man bewusst steuern kann", "etwas, das unbewusst wirkt"], correct: 1 },
-  { text: "Ich habe gestern … gelernt.", options: ["zwei Stücke am Stunden", "zwei Stunden am Stück"], correct: 1 },
-  { text: "Welche ist eine Beschäftigung?", options: ["Schlafen für immer", "Lesen"], correct: 1 },
-  { text: "Wenn du noch nicht fertig bist, musst du …", options: ["weiterschlafen", "weitermachen"], correct: 1 },
-  { text: "Die Suppe ist noch roh. Was musst du tun?", options: ["weitertrinken", "weiterkochen"], correct: 1 },
-  { text: "Das Spiel ist noch nicht zu Ende. Wir müssen …", options: ["weiterspielen", "weiteressen"], correct: 0 },
-  { text: "Das Glas ist halb voll. Was kannst du tun?", options: ["weiterlaufen", "weitertrinken"], correct: 1 },
-  { text: "Was ist ein See?", options: ["ein kleines Glas", "ein großer Süßwassersee"], correct: 1 },
-  { text: "Wo liegt Limone?", options: ["am Gardasee", "am Gardaberg"], correct: 0 },
-  { text: "„Die See“ bedeutet …", options: ["der Berg", "das Meer"], correct: 1 },
-  { text: "Wenn etwas nicht klar ist, ist es …", options: ["sehr klar", "verwirrend"], correct: 1 },
-  { text: "Was ist eine Insel?", options: ["ein hoher Berg", "Land, das vom Meer umgeben ist"], correct: 1 },
-  { text: "Woher kommst du?", options: ["von der Insel", "aus dem Himmel"], correct: 0 },
-  { text: "Wenn du Pech hast, dann hast du …", options: ["viel Glück", "kein Glück"], correct: 1 },
-  { text: "Ich möchte ins Kino gehen. Was mache ich?", options: ["Ich vergesse es", "Ich schlage es vor"], correct: 1 },
-  { text: "Der Arzt sagt: „Trink viel Wasser!“ – Das ist …", options: ["ein Unfall", "eine Empfehlung"], correct: 1 },
-  { text: "Ein Sturm auf dem Meer ist …", options: ["sehr sicher", "gefährlich"], correct: 1 },
-  { text: "Du bist reich. Trotzdem beneidest du mich!", options: ["Du bist entspannt", "Du bist eifersüchtig"], correct: 1 },
-  { text: "Was passiert, wenn es regnet?", options: ["Die Sonne scheint", "Wasser fällt vom Himmel"], correct: 1 },
-  { text: "Was ist maskulin?", options: ["die leichte Regen", "der leichte Regen"], correct: 1 },
-  { text: "Gestern gab es …", options: ["eine starke Regen", "einen starken Regen"], correct: 1 },
-  { text: "Welches ist korrekt?", options: ["eine starke Sturm", "ein starker Sturm"], correct: 1 },
-  { text: "Wann fährst du nach Italien?", options: ["im Montag", "im August"], correct: 1 },
-  { text: "Ich reise …", options: ["Mitte August", "Anfangs Montag"], correct: 0 },
-  { text: "Ich fahre nach Italien …", options: ["Ende August", "Anfang Septembere"], correct: 0 },
-  { text: "Welcher Satz ist richtig?", options: ["Ich fahre im August nach Deutsch", "Ich fahre im August nach Italien"], correct: 1 },
-  { text: "Welcher Satz ist richtig?", options: ["Ich fahre Ende August nach Italien", "Ich fahre Ende August nach August"], correct: 0 },
-  { text: "In Limone: Hörst du mehr …?", options: ["Chinesisch", "Deutsch"], correct: 1 },
-  { text: "Der Ort ist schöner geworden. Das heißt …", options: ["er ist gleich geblieben", "er hat sich verändert"], correct: 1 },
-  { text: "Wenn etwas besser wird, dann …", options: ["verschlechtert es sich", "verbessert es sich"], correct: 1 },
-  { text: "Was bedeutet „entstehen“?", options: ["neu geschaffen werden", "kaputtgehen"], correct: 0 },
-  { text: "Hast du den Ort zum ersten Mal besucht, seit du vor sieben Jahren …?", options: ["umgezogen bist", "aufgestanden bist"], correct: 0 },
-  { text: "Wenn man eine neue Wohnung nimmt, dann …", options: ["zieht man um", "zieht man ab"], correct: 0 },
-  { text: "Wenn man einen Ort verlässt, dann …", options: ["zieht man weg", "zieht man hin"], correct: 0 },
-  { text: "Er hat …", options: ["eine Arbeit verloren", "eine neue Arbeit gefunden"], correct: 1 },
-  { text: "Er hat …", options: ["einen besseren Job gefunden", "einen schlechteren Job verloren"], correct: 0 },
-  { text: "Sie müssen sich beeilen, …", options: ["das Zimmer langsamer zu machen", "das Zimmer fertig zu machen"], correct: 1 },
-  { text: "Wo sind wir?", options: ["im Süden von Spanien", "im Norden von Italien"], correct: 1 },
-  { text: "Ein Text wird …", options: ["gegessen", "bearbeitet"], correct: 1 },
-  { text: "Bevor du gehst, musst du dich …", options: ["vorbereiten", "verschlafen"], correct: 0 },
-  { text: "Ich bin …", options: ["hier", "nirgendwo"], correct: 0 },
-  { text: "Ich gehe …", options: ["dortsein", "hierher"], correct: 1 },
-  { text: "Er geht …", options: ["dortwo", "dorthin"], correct: 1 },
-  { text: "Passiv Präsens: …", options: ["Es ist empfohlen, zu Hause bleiben", "Es wird empfohlen, zu Hause zu bleiben"], correct: 1 },
-  { text: "Passiv Präteritum: …", options: ["Es wird empfohlen", "Es wurde empfohlen"], correct: 1 },
-  { text: "Passiv Perfekt: …", options: ["Es ist empfohlen worden", "Es war empfohlen"], correct: 0 },
-  { text: "Welche Form ist richtig? (Präsens)", options: ["du wurdest", "du wirst"], correct: 1 },
-  { text: "Welche Form ist richtig? (Präteritum)", options: ["ich wurde", "ich werde"], correct: 0 },
-  { text: "Welche Form ist richtig? (Perfekt)", options: ["ich habe gewarnt gewesen", "ich bin gewarnt worden"], correct: 1 },
-  { text: "Was sagte die Rezeption?", options: ["Ja, die Rezeption hat uns gesagt …", "Ja, die Rezeption ist uns gesagt"], correct: 0 },
-  { text: "Ist es gut, im August nach Italien zu reisen?", options: ["Nein, es ist ein Hund", "Ja, es ist gut"], correct: 1 },
-  { text: "Wenn du die Wohnung verlässt, musst du …", options: ["rausgehen", "reingehen"], correct: 0 },
-  { text: "Wenn du ins Zimmer willst, musst du …", options: ["rauslaufen", "reingehen"], correct: 1 }
+const questions =[
+  { "text": "Wie beginnt man korrekt? —> 'Also …'", "options": ["Also ich habe es bemerkt.", "Also habe ich es bemerkt."], "correct": 1 },
+  { "text": "Was bedeutet 'Ich habe mir etwas vorgenommen'?", "options": ["Ich habe etwas verloren.", "Ich habe einen Plan für mich gemacht."], "correct": 1 },
+  { "text": "Was passiert beim Druckausgleich im Ohr?", "options": ["Die Trommelfelle haben sich entspannt.", "Die Trommelfelle haben sich nach innen gesogen."], "correct": 0 },
+  { "text": "Welche Aussage ist korrekt?", "options": ["Ich kümmere mich dazu.", "Ich kümmere mich darum."], "correct": 1 },
+  { "text": "Welche Form ist richtig?", "options": ["Nachher kümmere ich mich dazu!", "Nachher kümmere ich mich darum!"], "correct": 1 },
+  { "text": "Wie kann man eine Rechnung bezahlen?", "options": ["per Vergebung", "per Überweisung"], "correct": 1 },
+  { "text": "Welche Aussage stimmt?", "options": ["Ich habe das Geld übergeworfen.", "Ich habe das Geld überwiesen."], "correct": 1 },
+  { "text": "Wie sagt man korrekt?", "options": ["Es löst ein paar Probleme zu geben.", "Es gibt ein paar Probleme zu lösen."], "correct": 1 },
+  { "text": "Welche Aussage ist korrekt?", "options": ["Diese Person macht mich ruhig.", "Diese Person macht mich wütend."], "correct": 1 },
+  { "text": "Was bedeutet 'die Bedeutung'?", "options": ["Die Größe einer Sache", "Sinn oder Erklärung einer Sache"], "correct": 1 },
+  { "text": "Was ist korrekt?", "options": ["Ein Teil von meiner Arbeit ist Erinnerung.", "Ein Teil von meiner Arbeit ist Routine."], "correct": 1 },
+  { "text": "Welche Tätigkeit passt?", "options": ["etwas Neues vergessen", "etwas Neues entdecken"], "correct": 1 },
+  { "text": "Was bedeutet 'an etwas teilnehmen'?", "options": ["weggehen", "dabei sein"], "correct": 1 },
+  { "text": "Welche Aussage ist richtig?", "options": ["Ich habe mein Studium in der Türkei abschließen.", "Ich habe mein Studium in der Türkei abgeschlossen."], "correct": 1 },
+  { "text": "Was passt zu 'sich verloben'?", "options": ["einen Kredit aufnehmen", "eine Verlobung eingehen"], "correct": 1 },
+  { "text": "Was bedeutet 'sich lohnen'?", "options": ["es ist sinnlos", "es ist wertvoll"], "correct": 1 },
+  { "text": "Welche Aussage ist korrekt?", "options": ["Wir mögen euch.", "Wir mögen uns."], "correct": 1 },
+  { "text": "Wie sagt man korrekt?", "options": ["Ich erinnere mich auf meinen Traum.", "Ich erinnere mich an meinen Traum."], "correct": 1 },
+  { "text": "Welche Form ist korrekt?", "options": ["Du erinnerst dich darauf, was du geträumt hast.", "Du erinnerst dich daran, was du geträumt hast."], "correct": 1 },
+  { "text": "Was stimmt?", "options": ["Wir haben Probleme, uns daran zu vergessen.", "Wir haben Probleme, uns daran zu erinnern."], "correct": 1 },
+  { "text": "Was bedeutet 'Beschäftigung'?", "options": ["eine Erinnerung", "eine Tätigkeit"], "correct": 1 },
+  { "text": "Welche Aussage ist korrekt?", "options": ["Er schlägt einen Ausflug zu.", "Er schlägt einen Ausflug vor."], "correct": 1 },
+  { "text": "Wie sagt man korrekt?", "options": ["Gestern gab es stark Regen.", "Gestern gab es starken Regen."], "correct": 1 },
+  { "text": "Welche Form ist richtig?", "options": ["ein starkes Regen", "ein starker Sturm"], "correct": 1 },
+  { "text": "Was passt zu 'im August'?", "options": ["Ich fahre Ende August nach Deutsch.", "Ich fahre Ende August nach Italien."], "correct": 1 },
+  { "text": "Welche Aussage ist sinnvoll?", "options": ["Hat sich der Ort verschwunden?", "Hat sich der Ort verändert?"], "correct": 1 },
+  { "text": "Was bedeutet 'sich verbessern'?", "options": ["schlechter werden", "besser werden"], "correct": 1 },
+  { "text": "Welche Aussage ist korrekt?", "options": ["In meinem Ort sind neue Fahrradwege erinnert.", "In meinem Ort sind neue Fahrradwege entstanden."], "correct": 1 },
+  { "text": "Was bedeutet 'umziehen'?", "options": ["etwas anziehen", "den Wohnort wechseln"], "correct": 1 },
+  { "text": "Welche Aussage ist korrekt?", "options": ["Er hat eine neue Arbeit verloren.", "Er hat eine neue Arbeit gefunden."], "correct": 1 },
+  { "text": "Welche Aussage ist korrekt?", "options": ["Sie müssen sich beruhigen.", "Sie müssen sich beeilen."], "correct": 1 },
+  { "text": "Welche Aussage stimmt?", "options": ["Wir sind auf Norden von Italien.", "Wir sind im Norden von Italien."], "correct": 1 },
+  { "text": "Welche Tätigkeit passt?", "options": ["ein Dokument beobachten", "ein Dokument bearbeiten"], "correct": 1 },
+  { "text": "Welche Aussage ist korrekt?", "options": ["Wir müssen das Zimmer vorarbeiten.", "Wir müssen das Zimmer vorbereiten."], "correct": 1 },
+  { "text": "Welche Aussage ist sinnvoll?", "options": ["Auch am Wochenende kümmere ich mich darauf.", "Auch am Wochenende kümmere ich mich darum."], "correct": 1 },
+  { "text": "Was bedeutet 'Trotzdem beneidest du mich!'?", "options": ["Du hilfst mir.", "Du bist eifersüchtig auf mich."], "correct": 1 },
+  { "text": "Welche Aussage ist korrekt?", "options": ["Im Hintergrund sieht man die Bedeutung.", "Im Hintergrund sieht man die Berge."], "correct": 1 },
+  { "text": "Was passt zu 'empfehlen'?", "options": ["Sie hat es mir empfehlen.", "Sie hat es mir empfohlen."], "correct": 1 },
+  { "text": "Welche Aussage ist korrekt?", "options": ["Der Schuldirektor unterrichtet nur Mathe.", "Der Schuldirektor leitet die Schule."], "correct": 1 },
+  { "text": "Welche Aussage ist korrekt?", "options": ["Ich habe mit sechs Jahren eingeschult.", "Ich wurde mit sechs Jahren eingeschult."], "correct": 1 }
 ];
-    let currentQuestion = 0;
-    let score = 0;
-    let incorrectAnswers = [];
-    let userAnswers = [];
 
-    function startQuiz() {
-      document.querySelector('.start-screen').style.display = 'none';
-      document.querySelector('.question-screen').style.display = 'flex';
-      document.body.style.overflow = 'hidden'; // ✨ Scrollen verhindern
-      showQuestion();
+// ✨ Shuffle-Funktion
+function shuffleArray(array) {
+  return array
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
+// ✨ Optionen zufällig mischen und correct-Index anpassen
+function randomizeQuestions(questions) {
+  return questions.map(q => {
+    const options = shuffleArray(q.options);
+    const correctAnswer = q.options[q.correct];
+    const correctIndex = options.indexOf(correctAnswer);
+    return {
+      text: q.text,
+      options: options,
+      correct: correctIndex
+    };
+  });
+}
+
+// Verwende die zufällig gemischten Fragen
+let randomizedQuestions = randomizeQuestions(questions);
+
+let currentQuestion = 0;
+let score = 0;
+let incorrectAnswers = [];
+let userAnswers = [];
+
+function startQuiz() {
+  document.querySelector('.start-screen').style.display = 'none';
+  document.querySelector('.question-screen').style.display = 'flex';
+  document.body.style.overflow = 'hidden'; // ✨ Scrollen verhindern
+  showQuestion();
+}
+
+function showQuestion() {
+  const container = document.getElementById('question-container');
+  const progressText = document.getElementById('progress-text');
+  const progressBar = document.getElementById('progress-bar');
+  container.innerHTML = '';
+
+  const q = randomizedQuestions[currentQuestion];
+  progressText.textContent = `Frage ${currentQuestion + 1} von ${randomizedQuestions.length}`;
+  progressBar.style.width = `${((currentQuestion) / randomizedQuestions.length) * 100}%`;
+
+  const questionText = document.createElement('p');
+  questionText.textContent = q.text;
+  container.appendChild(questionText);
+
+  const answerButtons = document.createElement('div');
+  answerButtons.classList.add('answers');
+
+  q.options.forEach((option, index) => {
+    const btn = document.createElement('button');
+    btn.textContent = option;
+    btn.onclick = () => handleAnswer(btn, index, answerButtons);
+    answerButtons.appendChild(btn);
+  });
+
+  container.appendChild(answerButtons);
+}
+
+function handleAnswer(clickedButton, index, buttonContainer) {
+  const q = randomizedQuestions[currentQuestion];
+  const buttons = buttonContainer.querySelectorAll('button');
+
+  buttons.forEach((btn, idx) => {
+    btn.disabled = true;
+    if (idx === q.correct) {
+      btn.style.backgroundColor = 'green';
+    } else if (btn === clickedButton) {
+      btn.style.backgroundColor = 'red';
+    } else {
+      btn.style.backgroundColor = '#007bff';
     }
+  });
 
-    function showQuestion() {
-      const container = document.getElementById('question-container');
-      const progressText = document.getElementById('progress-text');
-      const progressBar = document.getElementById('progress-bar');
-      container.innerHTML = '';
+  userAnswers[currentQuestion] = index;
 
-      const q = questions[currentQuestion];
-      progressText.textContent = `Frage ${currentQuestion + 1} von ${questions.length}`;
-      progressBar.style.width = `${((currentQuestion) / questions.length) * 100}%`;
+  if (index === q.correct) {
+    score++;
+  } else {
+    incorrectAnswers.push({ question: q.text, correctAnswer: q.options[q.correct] });
+  }
+}
 
-      const questionText = document.createElement('p');
-      questionText.textContent = q.text;
-      container.appendChild(questionText);
+function nextQuestion() {
+  if (currentQuestion < randomizedQuestions.length - 1) {
+    currentQuestion++;
+    showQuestion();
+  } else if (currentQuestion === randomizedQuestions.length - 1) {
+    currentQuestion++;
+    showResult();
+  }
+}
 
-      const answerButtons = document.createElement('div');
-      answerButtons.classList.add('answers');
+function prevQuestion() {
+  if (currentQuestion > 0) {
+    currentQuestion--;
+    showQuestion();
+  }
+}
 
-      q.options.forEach((option, index) => {
-        const btn = document.createElement('button');
-        btn.textContent = option;
-        btn.onclick = () => handleAnswer(btn, index, answerButtons);
-        answerButtons.appendChild(btn);
-      });
+function showResult() {
+  document.querySelector('.question-screen').style.display = 'none';
+  const resultScreen = document.querySelector('.result-screen');
+  resultScreen.style.display = 'flex';
+  document.body.style.overflow = 'auto'; // ✨ Scrollen auf Auswertungsseite erlauben
 
-      container.appendChild(answerButtons);
-    }
+  const scoreText = document.getElementById('score-text');
+  scoreText.textContent = `Du hast ${score} von ${randomizedQuestions.length} richtig.`;
 
-    function handleAnswer(clickedButton, index, buttonContainer) {
-      const q = questions[currentQuestion];
-      const buttons = buttonContainer.querySelectorAll('button');
+  const correctionList = document.getElementById('correction-list');
+  correctionList.innerHTML = '';
 
-      buttons.forEach((btn, idx) => {
-        btn.disabled = true;
-        if (idx === q.correct) {
-          btn.style.backgroundColor = 'green';
-        } else if (btn === clickedButton) {
-          btn.style.backgroundColor = 'red';
-        } else {
-          btn.style.backgroundColor = '#007bff';
-        }
-      });
+  randomizedQuestions.forEach((q, i) => {
+    const p = document.createElement('p');
+    const isCorrect = userAnswers[i] === q.correct;
+    const status = isCorrect ? "✅ Richtig" : `❌ Falsch – Richtige Antwort: ${q.options[q.correct]}`;
+    p.innerHTML = `<strong>Frage ${i + 1}:</strong> ${q.text.replace("___", "_____")}<br>${status}`;
+    correctionList.appendChild(p);
+  });
+}
 
-      userAnswers[currentQuestion] = index;
+function restartQuiz() {
+  currentQuestion = 0;
+  score = 0;
+  incorrectAnswers = [];
+  userAnswers = [];
 
-      if (index === q.correct) {
-        score++;
-      } else {
-        incorrectAnswers.push({ question: q.text, correctAnswer: q.options[q.correct] });
-      }
-    }
+  // ✨ Neue Randomisierung bei Neustart
+  randomizedQuestions = randomizeQuestions(questions);
 
-    function nextQuestion() {
-      if (currentQuestion < questions.length - 1) {
-        currentQuestion++;
-        showQuestion();
-      } else if (currentQuestion === questions.length - 1) {
-        currentQuestion++;
-        showResult();
-      }
-    }
+  document.querySelector('.result-screen').style.display = 'none';
+  document.querySelector('.start-screen').style.display = 'flex';
+  document.body.style.overflow = 'hidden'; // ✨ Scrollen wieder deaktivieren
+}
 
-    function prevQuestion() {
-      if (currentQuestion > 0) {
-        currentQuestion--;
-        showQuestion();
-      }
-    }
+// Swipe gesture support
+let touchStartX = 0;
+let touchEndX = 0;
 
-    function showResult() {
-      document.querySelector('.question-screen').style.display = 'none';
-      const resultScreen = document.querySelector('.result-screen');
-      resultScreen.style.display = 'flex';
-      document.body.style.overflow = 'auto'; // ✨ Scrollen auf Auswertungsseite erlauben
+document.addEventListener('touchstart', e => {
+  touchStartX = e.changedTouches[0].screenX;
+});
 
-      const scoreText = document.getElementById('score-text');
-      scoreText.textContent = `Du hast ${score} von ${questions.length} richtig.`;
+document.addEventListener('touchend', e => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
 
-      const correctionList = document.getElementById('correction-list');
-      correctionList.innerHTML = '';
-
-      questions.forEach((q, i) => {
-        const p = document.createElement('p');
-        const isCorrect = userAnswers[i] === q.correct;
-        const status = isCorrect ? "✅ Richtig" : `❌ Falsch – Richtige Antwort: ${q.options[q.correct]}`;
-        p.innerHTML = `<strong>Frage ${i + 1}:</strong> ${q.text.replace("___", "_____")}<br>${status}`;
-        correctionList.appendChild(p);
-      });
-    }
-
-    function restartQuiz() {
-      currentQuestion = 0;
-      score = 0;
-      incorrectAnswers = [];
-      userAnswers = [];
-
-      document.querySelector('.result-screen').style.display = 'none';
-      document.querySelector('.start-screen').style.display = 'flex';
-      document.body.style.overflow = 'hidden'; // ✨ Scrollen wieder deaktivieren
-    }
-
-    // Swipe gesture support
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    document.addEventListener('touchstart', e => {
-      touchStartX = e.changedTouches[0].screenX;
-    });
-
-    document.addEventListener('touchend', e => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    });
-
-    function handleSwipe() {
-      if (touchEndX < touchStartX - 50) {
-        nextQuestion();
-      }
-      if (touchEndX > touchStartX + 50) {
-        prevQuestion();
-      }
-    }
-  </script>
+function handleSwipe() {
+  if (touchEndX < touchStartX - 50) {
+    nextQuestion();
+  }
+  if (touchEndX > touchStartX + 50) {
+    prevQuestion();
+  }
+}
+</script>
 </body>
 </html>
