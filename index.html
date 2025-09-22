@@ -206,48 +206,50 @@
     </div>
   </div>
 <script>
+
+
+
 const questions =[
-  { "text": "Wie beginnt man korrekt? —> 'Also …'", "options": ["Also ich habe es bemerkt.", "Also habe ich es bemerkt."], "correct": 1 },
-  { "text": "Was bedeutet 'Ich habe mir etwas vorgenommen'?", "options": ["Ich habe etwas verloren.", "Ich habe einen Plan für mich gemacht."], "correct": 1 },
-  { "text": "Was passiert beim Druckausgleich im Ohr?", "options": ["Die Trommelfelle haben sich entspannt.", "Die Trommelfelle haben sich nach innen gesogen."], "correct": 0 },
-  { "text": "Welche Aussage ist korrekt?", "options": ["Ich kümmere mich dazu.", "Ich kümmere mich darum."], "correct": 1 },
-  { "text": "Welche Form ist richtig?", "options": ["Nachher kümmere ich mich dazu!", "Nachher kümmere ich mich darum!"], "correct": 1 },
-  { "text": "Wie kann man eine Rechnung bezahlen?", "options": ["per Vergebung", "per Überweisung"], "correct": 1 },
-  { "text": "Welche Aussage stimmt?", "options": ["Ich habe das Geld übergeworfen.", "Ich habe das Geld überwiesen."], "correct": 1 },
-  { "text": "Wie sagt man korrekt?", "options": ["Es löst ein paar Probleme zu geben.", "Es gibt ein paar Probleme zu lösen."], "correct": 1 },
-  { "text": "Welche Aussage ist korrekt?", "options": ["Diese Person macht mich ruhig.", "Diese Person macht mich wütend."], "correct": 1 },
-  { "text": "Was bedeutet 'die Bedeutung'?", "options": ["Die Größe einer Sache", "Sinn oder Erklärung einer Sache"], "correct": 1 },
-  { "text": "Was ist korrekt?", "options": ["Ein Teil von meiner Arbeit ist Erinnerung.", "Ein Teil von meiner Arbeit ist Routine."], "correct": 1 },
-  { "text": "Welche Tätigkeit passt?", "options": ["etwas Neues vergessen", "etwas Neues entdecken"], "correct": 1 },
-  { "text": "Was bedeutet 'an etwas teilnehmen'?", "options": ["weggehen", "dabei sein"], "correct": 1 },
-  { "text": "Welche Aussage ist richtig?", "options": ["Ich habe mein Studium in der Türkei abschließen.", "Ich habe mein Studium in der Türkei abgeschlossen."], "correct": 1 },
-  { "text": "Was passt zu 'sich verloben'?", "options": ["einen Kredit aufnehmen", "eine Verlobung eingehen"], "correct": 1 },
-  { "text": "Was bedeutet 'sich lohnen'?", "options": ["es ist sinnlos", "es ist wertvoll"], "correct": 1 },
-  { "text": "Welche Aussage ist korrekt?", "options": ["Wir mögen euch.", "Wir mögen uns."], "correct": 1 },
-  { "text": "Wie sagt man korrekt?", "options": ["Ich erinnere mich auf meinen Traum.", "Ich erinnere mich an meinen Traum."], "correct": 1 },
-  { "text": "Welche Form ist korrekt?", "options": ["Du erinnerst dich darauf, was du geträumt hast.", "Du erinnerst dich daran, was du geträumt hast."], "correct": 1 },
-  { "text": "Was stimmt?", "options": ["Wir haben Probleme, uns daran zu vergessen.", "Wir haben Probleme, uns daran zu erinnern."], "correct": 1 },
-  { "text": "Was bedeutet 'Beschäftigung'?", "options": ["eine Erinnerung", "eine Tätigkeit"], "correct": 1 },
-  { "text": "Welche Aussage ist korrekt?", "options": ["Er schlägt einen Ausflug zu.", "Er schlägt einen Ausflug vor."], "correct": 1 },
-  { "text": "Wie sagt man korrekt?", "options": ["Gestern gab es stark Regen.", "Gestern gab es starken Regen."], "correct": 1 },
-  { "text": "Welche Form ist richtig?", "options": ["ein starkes Regen", "ein starker Sturm"], "correct": 1 },
-  { "text": "Was passt zu 'im August'?", "options": ["Ich fahre Ende August nach Deutsch.", "Ich fahre Ende August nach Italien."], "correct": 1 },
-  { "text": "Welche Aussage ist sinnvoll?", "options": ["Hat sich der Ort verschwunden?", "Hat sich der Ort verändert?"], "correct": 1 },
-  { "text": "Was bedeutet 'sich verbessern'?", "options": ["schlechter werden", "besser werden"], "correct": 1 },
-  { "text": "Welche Aussage ist korrekt?", "options": ["In meinem Ort sind neue Fahrradwege erinnert.", "In meinem Ort sind neue Fahrradwege entstanden."], "correct": 1 },
-  { "text": "Was bedeutet 'umziehen'?", "options": ["etwas anziehen", "den Wohnort wechseln"], "correct": 1 },
-  { "text": "Welche Aussage ist korrekt?", "options": ["Er hat eine neue Arbeit verloren.", "Er hat eine neue Arbeit gefunden."], "correct": 1 },
-  { "text": "Welche Aussage ist korrekt?", "options": ["Sie müssen sich beruhigen.", "Sie müssen sich beeilen."], "correct": 1 },
-  { "text": "Welche Aussage stimmt?", "options": ["Wir sind auf Norden von Italien.", "Wir sind im Norden von Italien."], "correct": 1 },
-  { "text": "Welche Tätigkeit passt?", "options": ["ein Dokument beobachten", "ein Dokument bearbeiten"], "correct": 1 },
-  { "text": "Welche Aussage ist korrekt?", "options": ["Wir müssen das Zimmer vorarbeiten.", "Wir müssen das Zimmer vorbereiten."], "correct": 1 },
-  { "text": "Welche Aussage ist sinnvoll?", "options": ["Auch am Wochenende kümmere ich mich darauf.", "Auch am Wochenende kümmere ich mich darum."], "correct": 1 },
-  { "text": "Was bedeutet 'Trotzdem beneidest du mich!'?", "options": ["Du hilfst mir.", "Du bist eifersüchtig auf mich."], "correct": 1 },
-  { "text": "Welche Aussage ist korrekt?", "options": ["Im Hintergrund sieht man die Bedeutung.", "Im Hintergrund sieht man die Berge."], "correct": 1 },
-  { "text": "Was passt zu 'empfehlen'?", "options": ["Sie hat es mir empfehlen.", "Sie hat es mir empfohlen."], "correct": 1 },
-  { "text": "Welche Aussage ist korrekt?", "options": ["Der Schuldirektor unterrichtet nur Mathe.", "Der Schuldirektor leitet die Schule."], "correct": 1 },
-  { "text": "Welche Aussage ist korrekt?", "options": ["Ich habe mit sechs Jahren eingeschult.", "Ich wurde mit sechs Jahren eingeschult."], "correct": 1 }
+  { "text": "die Bildung", "options": ["education", "building"], "correct": 0 },
+  { "text": "das Bildungserlebnis", "options": ["educational experience", "educational building"], "correct": 0 },
+  { "text": "das Verhältnis", "options": ["relationship", "comparison"], "correct": 0 },
+  { "text": "einer Gruppe beitreten", "options": ["to join a group", "to leave a group"], "correct": 0 },
+  { "text": "sich in die Position von jemandem versetzen", "options": ["to put oneself in someone’s position", "to replace someone"], "correct": 0 },
+  { "text": "Vorteile", "options": ["advantages", "drawbacks"], "correct": 0 },
+  { "text": "Nachteile", "options": ["disadvantages", "benefits"], "correct": 0 },
+  { "text": "reif", "options": ["mature", "immature"], "correct": 0 },
+  { "text": "unreif", "options": ["immature", "mature"], "correct": 0 },
+  { "text": "die Langeweile", "options": ["boredom", "joy"], "correct": 0 },
+  { "text": "sich langweilen", "options": ["to be bored", "to have fun"], "correct": 0 },
+  { "text": "langweilig", "options": ["boring", "funny"], "correct": 0 },
+  { "text": "zurzeit", "options": ["currently", "sometimes"], "correct": 0 },
+  { "text": "helfen", "options": ["to help", "to hope"], "correct": 0 },
+  { "text": "sehen", "options": ["to see", "to say"], "correct": 0 },
+  { "text": "essen", "options": ["to eat", "to sit"], "correct": 0 },
+  { "text": "können", "options": ["can, to be able to", "to know"], "correct": 0 },
+  { "text": "kennen", "options": ["to know", "to be able to"], "correct": 0 },
+  { "text": "ich wäre", "options": ["I would be", "I will be"], "correct": 0 },
+  { "text": "ich hätte", "options": ["I would have", "I will have"], "correct": 0 },
+  { "text": "ich müsste", "options": ["I would have to", "I may"], "correct": 0 },
+  { "text": "ich dürfte", "options": ["I would be allowed to", "I must"], "correct": 0 },
+  { "text": "I would do", "options": ["ich würde machen", "ich hätte gemacht"], "correct": 0 },
+  { "text": "I would have done", "options": ["ich hätte gemacht", "ich würde machen"], "correct": 0 },
+  { "text": "Mir wird kalt", "options": ["I’m getting cold", "I’m getting hot"], "correct": 0 },
+  { "text": "Uns wird langweilig", "options": ["We’re getting bored", "We’re having fun"], "correct": 0 },
+  { "text": "abhängen von", "options": ["to depend on", "to hang out with"], "correct": 0 },
+  { "text": "Es hängt vom Wetter ab.", "options": ["It depends on the weather", "It depends on the day"], "correct": 0 },
+  { "text": "befähigen", "options": ["to enable", "to disable"], "correct": 0 }
 ];
+
+
+
+
+
+
+
+
+
+
 
 // ✨ Shuffle-Funktion
 function shuffleArray(array) {
