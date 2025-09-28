@@ -209,37 +209,136 @@
 
 
 
+
+
 const questions =[
-  { "text": "die Bildung", "options": ["education", "building"], "correct": 0 },
-  { "text": "das Bildungserlebnis", "options": ["educational experience", "educational building"], "correct": 0 },
-  { "text": "das Verhältnis", "options": ["relationship", "comparison"], "correct": 0 },
-  { "text": "einer Gruppe beitreten", "options": ["to join a group", "to leave a group"], "correct": 0 },
-  { "text": "sich in die Position von jemandem versetzen", "options": ["to put oneself in someone’s position", "to replace someone"], "correct": 0 },
-  { "text": "Vorteile", "options": ["advantages", "drawbacks"], "correct": 0 },
-  { "text": "Nachteile", "options": ["disadvantages", "benefits"], "correct": 0 },
-  { "text": "reif", "options": ["mature", "immature"], "correct": 0 },
-  { "text": "unreif", "options": ["immature", "mature"], "correct": 0 },
-  { "text": "die Langeweile", "options": ["boredom", "joy"], "correct": 0 },
-  { "text": "sich langweilen", "options": ["to be bored", "to have fun"], "correct": 0 },
-  { "text": "langweilig", "options": ["boring", "funny"], "correct": 0 },
-  { "text": "zurzeit", "options": ["currently", "sometimes"], "correct": 0 },
-  { "text": "helfen", "options": ["to help", "to hope"], "correct": 0 },
-  { "text": "sehen", "options": ["to see", "to say"], "correct": 0 },
-  { "text": "essen", "options": ["to eat", "to sit"], "correct": 0 },
-  { "text": "können", "options": ["can, to be able to", "to know"], "correct": 0 },
-  { "text": "kennen", "options": ["to know", "to be able to"], "correct": 0 },
-  { "text": "ich wäre", "options": ["I would be", "I will be"], "correct": 0 },
-  { "text": "ich hätte", "options": ["I would have", "I will have"], "correct": 0 },
-  { "text": "ich müsste", "options": ["I would have to", "I may"], "correct": 0 },
-  { "text": "ich dürfte", "options": ["I would be allowed to", "I must"], "correct": 0 },
-  { "text": "I would do", "options": ["ich würde machen", "ich hätte gemacht"], "correct": 0 },
-  { "text": "I would have done", "options": ["ich hätte gemacht", "ich würde machen"], "correct": 0 },
-  { "text": "Mir wird kalt", "options": ["I’m getting cold", "I’m getting hot"], "correct": 0 },
-  { "text": "Uns wird langweilig", "options": ["We’re getting bored", "We’re having fun"], "correct": 0 },
-  { "text": "abhängen von", "options": ["to depend on", "to hang out with"], "correct": 0 },
-  { "text": "Es hängt vom Wetter ab.", "options": ["It depends on the weather", "It depends on the day"], "correct": 0 },
-  { "text": "befähigen", "options": ["to enable", "to disable"], "correct": 0 }
-];
+
+  { "text": "Die Zahl der Langzeitarbeitslosen ist ___.", 
+    "options": ["gesunken", "gestiegen"], 
+    "correct": 0 },
+
+  { "text": "Die Arbeitslosigkeit ist zurzeit ___.", 
+    "options": ["niedrig", "hoch"], 
+    "correct": 0 },
+
+  { "text": "Man muss manchmal ___ setzen.", 
+    "options": ["Prioritäten", "Privatfirmen"], 
+    "correct": 0 },
+
+  { "text": "Er hat ein starkes ___.", 
+    "options": ["Schuldgefühl", "Schulheft"], 
+    "correct": 0 },
+
+  { "text": "Sie arbeitet in einer ___.", 
+    "options": ["Privatfirma", "Privatschule"], 
+    "correct": 0 },
+
+  { "text": "Im Moment arbeitet er ___.", 
+    "options": ["bei der Arbeit", "in der Arbeitlosigkeit"], 
+    "correct": 0 },
+
+  { "text": "Am Wochenende möchte ich mich ___.", 
+    "options": ["entspannen", "vergessen"], 
+    "correct": 0 },
+
+  { "text": "Bitte nichts ___.", 
+    "options": ["vergessen", "erholen"], 
+    "correct": 0 },
+
+  { "text": "Gestern sind viele Forscherinnen ___.", 
+    "options": ["angereist", "vergessen"], 
+    "correct": 0 },
+
+  { "text": "Er hat viel ___.", 
+    "options": ["Erfahrung", "Ergebnis"], 
+    "correct": 0 },
+
+  { "text": "Er ist ein erfahrener ___.", 
+    "options": ["Wissenschaftler", "Vertrag"], 
+    "correct": 0 },
+
+  { "text": "Warum hat er keine ___ angegeben?", 
+    "options": ["Quellen", "Qualitäten"], 
+    "correct": 0 },
+
+  { "text": "Das war ein ___ Verhalten.", 
+    "options": ["unethisches", "übliches"], 
+    "correct": 0 },
+
+  { "text": "Das Institut hat den Rednern das Hotel ___.", 
+    "options": ["bezahlt", "vergessen"], 
+    "correct": 0 },
+
+  { "text": "Wir müssen mit anderen Forschern ___.", 
+    "options": ["zusammenarbeiten", "zusammenvergessen"], 
+    "correct": 0 },
+
+  { "text": "Es gibt viele Fälle von ___.", 
+    "options": ["Diskriminierung", "Diskussion"], 
+    "correct": 0 },
+
+  { "text": "Diese Tradition ist in der ganzen Welt ___.", 
+    "options": ["verbreitet", "vergessen"], 
+    "correct": 0 },
+
+  { "text": "Er denkt immer zuerst an ___.", 
+    "options": ["sich selbst", "die Webseite"], 
+    "correct": 0 },
+
+  { "text": "Ich ___ noch einen Satz hinzufügen.", 
+    "options": ["muss", "darf nicht"], 
+    "correct": 0 },
+
+  { "text": "Hier ___ man nicht rauchen.", 
+    "options": ["darf", "muss"], 
+    "correct": 0 }
+]
+
+
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
